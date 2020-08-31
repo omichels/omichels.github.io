@@ -43,7 +43,7 @@ and the pick your version (i'm using 1.17.9 here as an example)
 
 6. The next step is simple, just uncordon all nodes in the node pool *default* and drain each node in node pool *second*
 
-7. Finally you can upgrade the node pool *second* or just delete it. But be aware that you need at least one node pool in the status of +System*
+7. Finally you can upgrade the node pool *second* or just delete it. But be aware that you need at least one node pool in the status of *System*
 
 `$ az aks nodepool update --resource-group rg-aks-test --cluster-name k8scluster --mode System`
 
