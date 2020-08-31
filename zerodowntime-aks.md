@@ -29,8 +29,6 @@ replica count is greater than 1
 
 `$ kubectl drain aks-default-89710360-vmss000001` 
 
-`$ kubectl drain aks-default-89710360-vmss000002` 
-
 4. Next step is upgrade the k8s control plane onto the new version.
 
 `$ az aks get-upgrades --resource-group rg-aks-test  --name k8scluster` 
