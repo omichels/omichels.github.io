@@ -16,6 +16,7 @@ services, while we are upgrade the first nodepool onto a higher version.
 `$ kubectl get nodes -o wide` 
 
 NAME | STATUS | ROLES | AGE | VERSION | INTERNAL-IP | EXTERNAL-IP | OS-IMAGE | KERNEL-VERSION | CONTAINER-RUNTIME
+---- | ------ | ----- | --- | ------- | ----------- | ----------- | -------- | -------------- | -----------------
 aks-default-89710360-vmss000000 | Ready | agent | 268d | v1.17.7 | 10.142.22.4 | <none> |  Ubuntu 16.04.6 LTS | 4.15.0-1089-azure | docker://3.0.10+azure
 aks-default-89710360-vmss000001 | Ready | agent | 252d | v1.17.7 | 10.142.22.65 | <none> |  Ubuntu 16.04.6 LTS | 4.15.0-1089-azure | docker://3.0.10+azure
 aks-default-89710360-vmss000002 | Ready | agent | 223d | v1.17.7 | 10.142.22.126 | <none> |  Ubuntu 16.04.6 LTS | 4.15.0-1089-azure | docker://3.0.10+azure
