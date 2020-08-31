@@ -45,7 +45,7 @@ and the pick your version (i'm using 1.17.9 here as an example)
 
 ## Finally you can upgrade the node pool *second* or just delete it. But be aware that you need at least one node pool in the status of *System*
 
-`$ az aks nodepool update --resource-group rg-aks-test --cluster-name k8scluster --mode System`
+`$ az aks nodepool update --resource-group rg-aks-test --cluster-name k8scluster --name default --mode System`
 
 `$ az aks nodepool delete --resource-group rg-aks-test --cluster-name k8scluster --name second`
 
