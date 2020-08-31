@@ -22,8 +22,7 @@ aks-default-89710360-vmss000001 | Ready | agent | 252d | v1.17.7 | 10.142.22.65 
 aks-second-89710360-vmss000000 | Ready | agent | 20m | v1.17.7 | 10.142.22.187 | <none> |  Ubuntu 16.04.6 LTS | 4.15.0-1089-azure | docker://3.0.10+azure
 aks-second-89710360-vmss000001 | Ready | agent | 21m | v1.17.7 | 10.142.23.53 | <none> |  Ubuntu 16.04.6 LTS | 4.15.0-1089-azure | docker://3.0.10+azure
 
-## Now we can just disable the nodes on the first node pool, all pods get evicted and are restarted on the other node pool. Just take care that your 
-replica count is greater than 1
+## Now we can just disable the nodes on the first node pool, all pods get evicted and are restarted on the other node pool. Just take care that your replica count is greater than 1
 
 `$ kubectl drain aks-default-89710360-vmss000000` 
 
