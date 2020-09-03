@@ -3,6 +3,11 @@
 Upgrading of Kubernetes Cluster onto a new version is no easy task, but doable!
 The trick is to establish a workflow and stick to it. It looks like this:
 
+
+![Nodepools](nodepools_before.png)
+
+We are starting with a kubernetes cluster consisting of 2 nodes, running version 1.17.7
+
 ## Use a cluster containing of 2 node pools
 
 We enhance our cluster with an addional nodepool, which will host the running
@@ -19,7 +24,6 @@ I will reuse these environment Vars in this example
 
 `$ kubectl get nodes -o wide` 
 
-![Nodepools](nodepools_before.png)
 
 NAME | STATUS | ROLES | AGE | VERSION
 ---- | ------ | ----- | --- | ------- 
