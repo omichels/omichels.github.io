@@ -1,7 +1,7 @@
 # How to achieve zero downtime of Kubernetes Services with Azure
 
-Upgrading of Kubernetes Cluster onto a new version is no easy task, but doable!
-The trick is to establish a workflow and stick to it. It looks like this:
+Upgrading of a Kubernetes Cluster onto a new version is no easy task, but doable!
+The trick is to establish a workflow and to stick to it. It can look something like this:
 
 
 ![Nodepools](nodepools_before.png)
@@ -20,7 +20,7 @@ I will reuse these environment Vars in this example
 `$ az aks nodepool add --resource-group $RESOURCE_GROUP  --cluster-name $CLUSTER_NAME --node-vm-size Standard_DS2_v2 --name internal --node-count 2`
 
 
-## Now we are running a cluster with 2 node pools, next step is to shift all running services onto the new cluster nodes
+## Now we are running a cluster with 2 node pools, the next step is to shift all running services onto the new cluster nodes
 
 `$ kubectl get nodes -o wide` 
 
@@ -42,7 +42,7 @@ aks-internal-13160437-vmss000001 |  Ready | agent | 47m  | v1.17.7
 
 Now all pods will get evicted from the first nodepool and get restarted on the other nodepool, enabling a safe upgrade of the unused nodes in the first pool.
 
-## Next step is upgrade the k8s control plane onto the new version.
+## The next step is to upgrade the k8s control plane onto the new version.
 
 `$ az aks get-upgrades --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME` 
 
