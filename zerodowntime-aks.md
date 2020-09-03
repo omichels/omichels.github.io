@@ -61,7 +61,7 @@ This way all your pods will migrate back to the default pool, which is now runni
 
 ## Finally you can upgrade the node pool *internal* or just delete it. 
 
-But be aware that you need at least one node pool in the status of *System*, otherwise you won't be able to delete it.
+But be aware that you need at least one node pool in the status of *System*, otherwise you won't be able to delete the other one.
 
 `$ az aks nodepool update --resource-group $RESOURCE_GROUP --cluster-name $CLUSTER_NAME --name default --mode System`
 
