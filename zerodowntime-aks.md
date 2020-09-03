@@ -24,9 +24,9 @@ I will reuse these environment Vars in this example
 NAME | STATUS | ROLES | AGE | VERSION
 ---- | ------ | ----- | --- | ------- 
 aks-default-13160437-vmss000000 | Ready | agent | 3h59m | v1.17.7
-aks-default-13160437-vmss000001 | Ready  agent  3h59m | v1.17.7
-aks-second-13160437-vmss000000 | Ready  agent | 46m | v1.17.7
-aks-second-13160437-vmss000001 |  Ready  agent | 47m  | v1.17.7
+aks-default-13160437-vmss000001 | Ready | agent  3h59m | v1.17.7
+aks-second-13160437-vmss000000 | Ready | agent | 46m | v1.17.7
+aks-second-13160437-vmss000001 |  Ready | agent | 47m  | v1.17.7
 
 ![Azure Nodepools](azure_nodepools.png)
 
