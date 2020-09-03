@@ -6,13 +6,16 @@ The trick is to establish a workflow and stick to it. It looks like this:
 ## Use a cluster containing of 2 node pools
 
 We enhance our cluster with an addional nodepool, which will host the running
-services, while we are upgradeing the first nodepool onto a higher version.
+services, while we are upgrading the first nodepool onto a higher version.
 
 `$ export RESOURCE_GROUP=rg-aks-test; export CLUSTER_NAME=k8scluster`
+
+I will reuse these environment Vars in this example
+
 `$ az aks nodepool add --resource-group $RESOURCE_GROUP  --cluster-name $CLUSTER_NAME --node-vm-size Standard_DS2_v2 --name second --node-count 2`
 
 
-## We are running now a cluster with 2 node pools, next step is to shift all running services onto the new cluster nodes
+## Now We are running a cluster with 2 node pools, next step is to shift all running services onto the new cluster nodes
 
 `$ kubectl get nodes -o wide` 
 
