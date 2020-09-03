@@ -15,6 +15,8 @@ services, while we are upgradeing the first nodepool onto a higher version.
 
 `$ kubectl get nodes -o wide` 
 
+![Nodepools](nodepools_before.png)
+
 NAME | STATUS | ROLES | AGE | VERSION | INTERNAL-IP | EXTERNAL-IP | OS-IMAGE 
 ---- | ------ | ----- | --- | ------- | ----------- | ----------- | -------- 
 aks-default-89710360-vmss000000 | Ready | agent | 268d | v1.17.7 | 10.142.22.4 | <none> |  Ubuntu 16.04.6 LTS
