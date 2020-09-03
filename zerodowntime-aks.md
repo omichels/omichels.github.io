@@ -13,22 +13,22 @@ We are starting with a kubernetes cluster consisting of 2 nodes, running version
 We enhance our cluster with an addional nodepool, which will host the running
 services, while we are upgrading the first nodepool onto a higher version.
 
-`$ export RESOURCE_GROUP=rg-aks-test; export CLUSTER_NAME=k8scluster`
+`$ export RESOURCE_GROUP=YOUR_GROUP_NAME; export CLUSTER_NAME=k8scluster`
 
 I will reuse these environment Vars in this example
 
 `$ az aks nodepool add --resource-group $RESOURCE_GROUP  --cluster-name $CLUSTER_NAME --node-vm-size Standard_DS2_v2 --name internal --node-count 2`
 
 
-## Now We are running a cluster with 2 node pools, next step is to shift all running services onto the new cluster nodes
+## Now we are running a cluster with 2 node pools, next step is to shift all running services onto the new cluster nodes
 
 `$ kubectl get nodes -o wide` 
 
 
 NAME | STATUS | ROLES | AGE | VERSION
 ---- | ------ | ----- | --- | ------- 
-aks-default-13160437-vmss000000 | Ready | agent | 3h59m | v1.17.7
-aks-default-13160437-vmss000001 | Ready | agent  3h59m | v1.17.7
+aks-default-13160437-vmss000000 | Ready | agent | 5h59m | v1.17.7
+aks-default-13160437-vmss000001 | Ready | agent | 5h59m | v1.17.7
 aks-internal-13160437-vmss000000 | Ready | agent | 46m | v1.17.7
 aks-internal-13160437-vmss000001 |  Ready | agent | 47m  | v1.17.7
 
