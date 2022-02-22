@@ -36,29 +36,22 @@ az network public-ip list --query "[].ipAddress" | jq ".[]" | tr -d '\"' | nrich
 
 example output:
 ```
-20.73.149.63
+20.73.224.111
   Ports: 443
   Tags: cloud
 
-20.76.202.174
+20.76.224.174
   Ports: 80
   Tags: cloud
   CPEs: cpe:/a:igor_sysoev:nginx
 
-20.123.224.98
+20.224.212.98
   Ports: 80
   Tags: cloud
   CPEs: cpe:/a:jquery:jquery, cpe:/a:jquery:jquery_ui
 
-20.123.224.111
+20.224.224.111
   Ports: 80
   CPEs: cpe:/a:igor_sysoev:nginx
 
-20.93.189.68
-  Ports: 443
-  Tags: cloud
-
-20.23.58.108
-  Ports: 80
-  Tags: cloud
 ```
