@@ -95,4 +95,7 @@ Plan: 1 to add, 0 to change, 0 to destroy.
 
 ```
 
+### sourcecode
 
+- [iac-environment, terraform module call](https://github.com/omichels/captain-k8s-iac-environment/blob/master/main.tf)
+- [terraform module "write-secrets"](https://github.com/omichels/captain-k8s-iac-modules/blob/master/write-azure-key-vault-secrets/main.tf)
