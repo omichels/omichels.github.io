@@ -1,1 +1,6 @@
 theme: jekyll-theme-hacker
+plugins:
+    - jekyll-feed
+title: Olivers Blog on DevOps
+description: my DevOps blog
+author: Oliver Michels
