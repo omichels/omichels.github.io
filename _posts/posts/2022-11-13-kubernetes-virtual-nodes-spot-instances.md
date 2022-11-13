@@ -5,6 +5,7 @@ updated: 2022-11-13
 category: posts
 ---
 
+
 Just a quick reminder that Kubernetes is a total gamechanger for all software development projects.
 Providings new environments or stages does no longer take weeks or days any longer but can be managed 
 with minutes.
