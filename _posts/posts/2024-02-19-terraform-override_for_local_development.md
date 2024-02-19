@@ -41,9 +41,10 @@ resource "helm_release" "database" {
 }
 ```
 
-It would be fine to disable the "foo_resource_definitions" terraform part, 
-this way you could test the rest of your code more easily.
-So, you could use a construct like this, polluting your code and making
+It would be fine to disable the "foo_resource_definitions" part, 
+this way you could test the rest more easily.
+
+So, you could use a construct like this, but this would be polluting your code and making
 it harder to read:
 
 
@@ -58,19 +59,5 @@ resource "foo_resource_definition" "foo" {
 Or, and that would be an even better solution, just leave the for_each block
 untouched and move this to a new file and override the critical part.
 
-So, copy the file "foo-resources.tf" into "foo-resources_override.tf"
-and change the for_each block only in that file. Also add "*_override.tf" to your .gitignore
-
-
-
-
-
-
-
-
-
-
-
-
-See full [example](https://omichels.github.io/terraform/for_each_sensitive_keys/for_each_sensitive_keys) with source code
-
+Just copy the file "foo-resources.tf" into "foo-resources_override.tf"
+and change the for_each block only in that file. 
