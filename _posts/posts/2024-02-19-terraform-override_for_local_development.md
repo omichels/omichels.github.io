@@ -5,11 +5,13 @@ updated: 2024-02-19
 category: posts
 ---
 
+## Clean and Testable Terraform-Code
+
 Keep terraform code readable and clutter-free is no easy task.
 And often overlooked feature is the terraform override mechanism.
 Suppose you have this code and you cannot inject a mock-provider for
 the "foo_resource_definitions", but on the other hand you would like
-to test your helm_resources (using minikube or KIND).
+to test your helm_resources (using minikube or [KIND](https://kind.sigs.k8s.io/)).
 
 
 contents of file foo-resources.tf
@@ -61,3 +63,36 @@ untouched and move this to a new file and override the critical part.
 
 Just copy the file "foo-resources.tf" into "foo-resources_override.tf"
 and change the for_each block only in that file. 
+
+
+## Final solution looks like this:
+
+contents of file foo-resources.tf
+```
+resource "foo_resource_definition" "foo" {
+  for_each = {
+    for index, db in(var.databases) :
+    db.name => db
+  }
+
+  id          = each.value.name
+  name        = each.value.name
+  ...
+}
+```
+
+contents of file foo-resources_override.tf
+```
+resource "foo_resource_definition" "foo" {
+  for_each = var.fake_enabled == false ? {
+    for index, db in(var.databases) :
+    db.name => db
+  } : {}
+
+  id          = each.value.name
+  name        = each.value.name
+  ...
+}
+```
+
+
